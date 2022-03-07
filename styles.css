@@ -1,0 +1,346 @@
+/* ========= GLOBAL ========= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* ========= VARIABLES ========= */
+
+:root {
+    --primary_one: hsl(31, 77%, 52%);
+    --primary_two: hsl(184, 100%, 22%);
+    --primary_three: hsl(179, 100%, 13%);
+    --secundary: hsl(0, 0%, 90%);
+    --font-color: hsl(0, 0%, 20%);
+    --bg-color: hsl(0, 0%, 95%);
+    --neutral: hsla(0, 0%, 100%, 0.75);
+    --button: hsla(0, 0%, 100%);
+    --primary_font: Lexend Deca, sans-serif;
+    --secundary_font: Big Shoulders Display, sans-serif;
+}
+
+/* ========= LAYOUT ========= */
+
+body,
+nav,
+nav ul,
+section,
+.card,
+footer {
+    display: flex;
+}
+
+body {
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em 2em;
+}
+
+.home img {
+    padding-bottom: 1.5em;
+    transition: 300ms ease-in-out;
+}
+
+nav ul {
+    flex-direction: column;
+    gap: 1.5em;
+    flex: 1;
+    text-align: center;
+}
+
+section {
+   flex-direction: column;
+   min-width: 300px;
+   padding: 4em 0;
+}
+
+.card {
+    flex-direction: column;
+    width: 80vw;
+    margin: auto;
+    padding: 3em;
+    flex: 1;
+}
+
+.card_img {
+    width: 60px;
+}
+
+.card h2 {
+    margin: 0.8em 0;
+}
+
+footer {
+    padding: 2em 0;
+}
+
+/* ========= STYLE ========= */
+
+body {
+    background-color: var(--bg-color);
+}
+
+nav {
+    background-color: var(--secundary);
+}
+
+nav ul {
+    list-style: none;
+    
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 15px;
+    font-family: var(--primary_font);
+    font-weight: 400;
+    cursor: pointer;
+    background-color: var(--button);
+    padding: 0.5em 1em;
+    border-radius: 1em;
+    border: 2px solid var(--button);
+    transition: 300ms ease-in-out;
+}
+
+.card:first-child {
+    background-color: var(--primary_one);
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+
+.card:nth-child(2) {
+    background-color: var(--primary_two);
+}
+
+
+.card:last-child {
+    background-color: var(--primary_three);
+    border-bottom-left-radius: 00.5em;
+    border-bottom-right-radius: 00.5em;
+}
+
+footer {
+    background-color: var(--secundary);
+    
+}
+
+footer p {
+    text-align: center;
+    margin: auto;
+    color: var(--font-color);
+}
+
+.card h2, p {
+    color: var(--neutral);
+}
+
+.card h2 {
+    font-family: var(--secundary_font);
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.card p {
+    line-height: 1.8;
+}
+
+.card button {
+    display: inline-block;
+    border: 2px solid var(--button);
+    background-color: var(--button);
+    text-decoration: none;
+    width: 160px;
+    padding: 1em 0;
+    border-radius: 3em;
+    margin: 2em 0 0;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--primary_font);
+    transition: 300ms ease-in-out;
+}
+
+.card:first-child button {
+    color: var(--primary_one);
+}
+
+.card:nth-child(2) button {
+    color: var(--primary_two);
+}
+
+.card:last-child button{
+    color: var(--primary_three);
+}
+
+p {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--primary_font);
+}
+
+
+/* ========= HOVER ========= */
+
+.home img:hover {
+    transform: rotate(50deg);
+}
+
+.nav-links:hover {
+   
+    color: var(--button);
+    background-color: var(--secundary);
+}
+
+.card:first-child button:hover {
+    background-color: var(--primary_one);
+    color: var(--button);
+}
+
+.card:nth-child(2) button:hover {
+    background-color: var(--primary_two);
+    color: var(--button);
+}
+
+.card:last-child button:hover {
+    background-color: var(--primary_three);
+    color: var(--button);
+}
+
+
+/* ========= MEDIA QUERIES ========= */
+
+@media (min-width: 375px) {
+
+    section {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        max-width: 1440px;
+        padding: 4em 0;
+        flex-wrap: wrap;
+     }
+
+     .card {
+        max-width: 330px;
+        height: 480px;
+        padding: 3em;
+    }
+
+}
+
+
+ @media (min-width: 513px) {
+
+    .card:first-child {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.5em;
+    }
+
+    .card:last-child {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.5em;
+    }
+
+    .card {
+        max-width: 330px;
+        height: 550px;
+    }
+
+    .card button {
+        
+        margin: 5em 0 0;
+        
+    }
+
+ }
+
+
+@media (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5em 2em;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 2em;
+        flex: 1;
+    }
+
+    .home img {
+        padding-bottom: 0;
+    }
+
+}
+
+
+@media (min-width: 880px) {
+
+    nav {
+        justify-content: space-evenly;
+    }
+
+    .card button {
+        
+        margin: 6em 0 0;
+        
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%)
+
+### Neutral
+
+Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
